@@ -1,7 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { AXES, type AxisId } from '../data/axes'
 import { THEME_BY_ID } from '../data/themes'
 import { QUESTIONS, SCALE_LABEL } from '../lib/data'
+import { createOrRenameSave, findSave } from '../lib/saves'
 import {
   axisVerdict,
   computeResults,
@@ -18,7 +19,8 @@ import { canvasToBlob, drawShareImage } from '../lib/image'
 import { href } from '../lib/router'
 import Compass from '../components/Compass'
 import { Dialog } from '../components/Layout'
-import { CopyIcon, DownloadIcon, ImageIcon, LinkIcon, SparkIcon } from '../components/Icons'
+import SaveDialog from '../components/SaveDialog'
+import { CopyIcon, DownloadIcon, ImageIcon, LinkIcon, SaveIcon, SparkIcon } from '../components/Icons'
 
 const pct = (n: number) => `${n.toFixed(1).replace('.', ',')} %`
 const toPos = (v: number) => `${((v + 1) / 2) * 100}%`
@@ -347,6 +349,8 @@ function ResultsView({
   startedAt,
   finishedAt,
   shared,
+  savedName,
+  onSave,
   onRestart,
 }: {
   answers: Answers
@@ -355,11 +359,16 @@ function ResultsView({
   startedAt?: string | null
   finishedAt?: string | null
   shared?: boolean
+  /** Nom de la sauvegarde nommée liée à ces résultats, s'il y en a une. */
+  savedName?: string
+  /** Enregistre (ou renomme) la sauvegarde ; renvoie false si le stockage est indisponible. */
+  onSave: (name: string) => boolean
   onRestart?: () => void
 }) {
   const results = useMemo(() => computeResults(answers), [answers])
   const [axes, setAxes] = useState<[AxisId, AxisId]>(['economie', 'autorite'])
   const [confirm, setConfirm] = useState(false)
+  const [saving, setSaving] = useState(false)
   const toast = useToast()
   const top = results.affinities[0]
   const markdown = () => buildMarkdown({ answers, explanations, order, results, startedAt, finishedAt })
@@ -387,6 +396,12 @@ function ResultsView({
           {leftRightLabel(results.leftRight)} · {results.answered} réponses
           {results.skipped > 0 && `, ${results.skipped} passées`}
         </p>
+        <div className="results-save">
+          <button className="btn btn-sm save-btn" onClick={() => setSaving(true)}>
+            <SaveIcon /> {savedName ? 'Renommer la sauvegarde' : 'Sauvegarder ces résultats'}
+          </button>
+          {savedName && <span className="muted">Sauvegardé sous « {savedName} »</span>}
+        </div>
       </header>
 
       <ExportPanel results={results} answers={answers} markdown={markdown} axes={axes} toast={toast.show} />
@@ -451,6 +466,27 @@ function ResultsView({
         </Dialog>
       )}
 
+      {saving && (
+        <SaveDialog
+          initialName={savedName ?? ''}
+          title="Sauvegarder ces résultats"
+          onCancel={() => setSaving(false)}
+          onSave={(name) => {
+            setSaving(false)
+            toast.show(
+              onSave(name)
+                ? `Sauvegardé sous « ${name.trim()} »`
+                : 'Impossible d’enregistrer : stockage du navigateur indisponible',
+            )
+          }}
+        >
+          {shared
+            ? 'Les réponses de ce lien seront gardées dans ce navigateur (sans explications écrites, elles ne sont pas dans le lien).'
+            : 'Vos réponses, explications et résultats seront gardés dans ce navigateur.'}{' '}
+          Vous les retrouverez sur la page d’accueil, avec le courant obtenu et la date.
+        </SaveDialog>
+      )}
+
       {toast.msg && (
         <div className="toast" role="status">
           {toast.msg}
@@ -460,7 +496,20 @@ function ResultsView({
   )
 }
 
-export default function ResultsPage({ state, onRestart }: { state: QuizState; onRestart: () => void }) {
+export default function ResultsPage({
+  state,
+  setState,
+  onRestart,
+}: {
+  state: QuizState
+  setState: (fn: (s: QuizState | null) => QuizState | null) => void
+  onRestart: () => void
+}) {
+  const save = (name: string) => {
+    const linked = createOrRenameSave(name, state)
+    if (linked) setState(() => linked)
+    return !!linked
+  }
   return (
     <ResultsView
       answers={state.answers}
@@ -468,6 +517,8 @@ export default function ResultsPage({ state, onRestart }: { state: QuizState; on
       order={state.order}
       startedAt={state.startedAt}
       finishedAt={state.finishedAt}
+      savedName={findSave(state.saveId)?.name}
+      onSave={save}
       onRestart={onRestart}
     />
   )
@@ -475,6 +526,9 @@ export default function ResultsPage({ state, onRestart }: { state: QuizState; on
 
 export function SharedResults({ code }: { code: string }) {
   const answers = useMemo(() => decodeAnswers(code), [code])
+  // Sauvegarde créée depuis ce lien : indépendante de la progression en cours du navigateur.
+  const [linked, setLinked] = useState<QuizState | null>(null)
+  useEffect(() => setLinked(null), [code])
   if (!answers) {
     return (
       <div className="container narrow prose">
@@ -488,5 +542,28 @@ export function SharedResults({ code }: { code: string }) {
       </div>
     )
   }
-  return <ResultsView answers={answers} explanations={{}} order={[]} shared />
+  const save = (name: string) => {
+    const now = new Date().toISOString()
+    const base: QuizState = linked ?? {
+      order: QUESTIONS.map((q) => q.id).sort((a, b) => a - b),
+      answers,
+      explanations: {},
+      index: QUESTIONS.length - 1,
+      startedAt: now,
+      finishedAt: now,
+    }
+    const saved = createOrRenameSave(name, base)
+    if (saved) setLinked(saved)
+    return !!saved
+  }
+  return (
+    <ResultsView
+      answers={answers}
+      explanations={{}}
+      order={[]}
+      shared
+      savedName={findSave(linked?.saveId)?.name}
+      onSave={save}
+    />
+  )
 }

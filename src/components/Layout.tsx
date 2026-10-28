@@ -34,16 +34,27 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div>
-          Un projet <strong>{SITE.association}</strong> · Aucune donnée collectée
+          <div>
+            &copy; {new Date().getFullYear()} <strong>{SITE.association}</strong> · Tous droits réservés
+          </div>
+          <div className="footer-credits">
+            Développé par{' '}
+            <a href={SITE.developerUrl} target="_blank" rel="noreferrer">
+              {SITE.developer}
+            </a>{' '}
+            · Hébergé par{' '}
+            <a href={SITE.hostUrl} target="_blank" rel="noreferrer">
+              {SITE.host}
+            </a>
+          </div>
         </div>
-        <div className="footer-links">
-          <span>Développé par {SITE.developer}</span>
-          <span>Hébergé par {SITE.host}</span>
+        <nav className="footer-links" aria-label="Liens du pied de page">
+          <a href={SITE.associationUrl}>Site {SITE.association}</a>
           <a href={href.method}>Méthodologie</a>
           <a href={SITE.githubUrl} target="_blank" rel="noreferrer">
-            Code source (GitHub)
+            Code source
           </a>
-        </div>
+        </nav>
       </div>
     </footer>
   )

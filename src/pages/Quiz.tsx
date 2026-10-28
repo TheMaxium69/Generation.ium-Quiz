@@ -2,8 +2,8 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { QUESTION_BY_ID, SCALE } from '../lib/data'
 import { href, navigate } from '../lib/router'
 import type { QuizState } from '../lib/state'
-import { createOrRenameSave, findSave, MAX_SAVE_NAME } from '../lib/saves'
-import { Dialog } from '../components/Layout'
+import { createOrRenameSave, findSave } from '../lib/saves'
+import SaveDialog from '../components/SaveDialog'
 import type { AnswerValue } from '../lib/scoring'
 import { ArrowLeft, ArrowRight, SaveIcon } from '../components/Icons'
 
@@ -248,11 +248,13 @@ export default function Quiz({
       {saving && (
         <SaveDialog
           initialName={savedName ?? ''}
-          answered={answeredCount}
-          total={total}
+          title="Sauvegarder ma progression"
           onCancel={() => setSaving(false)}
           onSave={save}
-        />
+        >
+          {answeredCount}/{total} réponses, explications comprises. La sauvegarde reste dans ce navigateur et se met à
+          jour à chaque réponse. Vous la retrouverez sur la page d’accueil.
+        </SaveDialog>
       )}
       {toast && (
         <div className="toast toast-quiz" role="status">
@@ -260,53 +262,5 @@ export default function Quiz({
         </div>
       )}
     </div>
-  )
-}
-
-function SaveDialog({
-  initialName,
-  answered,
-  total,
-  onSave,
-  onCancel,
-}: {
-  initialName: string
-  answered: number
-  total: number
-  onSave: (name: string) => void
-  onCancel: () => void
-}) {
-  const [name, setName] = useState(initialName)
-  const inputRef = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    inputRef.current?.focus()
-    inputRef.current?.select()
-  }, [])
-
-  return (
-    <Dialog
-      title={initialName ? 'Renommer la sauvegarde' : 'Sauvegarder ma progression'}
-      confirmLabel="Enregistrer"
-      confirmDisabled={!name.trim()}
-      onCancel={onCancel}
-      onConfirm={() => onSave(name)}
-    >
-      <p>
-        {answered}/{total} réponses, explications comprises. La sauvegarde reste dans ce navigateur et se met à jour à
-        chaque réponse. Vous la retrouverez sur la page d’accueil.
-      </p>
-      <label className="field">
-        <span>Nom de la sauvegarde</span>
-        <input
-          ref={inputRef}
-          type="text"
-          value={name}
-          maxLength={MAX_SAVE_NAME}
-          placeholder="Ex. : Camille, soirée du 28"
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-    </Dialog>
   )
 }

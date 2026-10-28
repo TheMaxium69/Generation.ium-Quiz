@@ -34,7 +34,7 @@ export default function App() {
       break
     case 'results':
       page = state?.finishedAt ? (
-        <ResultsPage state={state} onRestart={start} />
+        <ResultsPage state={state} setState={setState} onRestart={start} />
       ) : (
         <Home state={state} onStart={start} onLoad={load} />
       )

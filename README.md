@@ -33,6 +33,6 @@ Si vous ajoutez ou retirez des questions, les sauvegardes en cours et les ancien
 - Questions mélangées à chaque passage, sans affichage du thème.
 - Échelle à 7 niveaux, bouton « Passer » (question exclue du calcul) et explication facultative.
 - Progression sauvegardée dans le `localStorage` du navigateur (`giq-state-v1`).
-- Sauvegardes nommées (`giq-saves-v1`, voir `src/lib/saves.ts`) : bouton « Sauvegarder » pendant le questionnaire, liste sur l'accueil pour reprendre ou supprimer. Une progression reliée à une sauvegarde la met à jour à chaque réponse. Chaque sauvegarde s'exporte en fichier `.json` (format `giq-save` v1) et se réimporte depuis l'accueil, sur n'importe quel navigateur.
+- Sauvegardes nommées (`giq-saves-v1`, voir `src/lib/saves.ts`) : bouton « Sauvegarder » pendant le questionnaire et sur les résultats (y compris ceux d'un lien de partage), liste sur l'accueil pour reprendre ou supprimer. Une progression reliée à une sauvegarde la met à jour à chaque réponse. Chaque sauvegarde s'exporte en fichier `.json` (format `giq-save` v1) et se réimporte depuis l'accueil, sur n'importe quel navigateur.
 - Lien de partage : les réponses (pas les explications) sont encodées dans l'URL (`#/r/v1-…`).
 - Raccourcis clavier : `1`–`7` répondre, `Entrée` suivant, `←` précédent, `P` passer, `E` expliquer.

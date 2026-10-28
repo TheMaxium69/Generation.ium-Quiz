@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { AXES } from '../data/axes'
 import { COURANTS, QUESTIONS } from '../lib/data'
 import { href, navigate } from '../lib/router'
 import type { QuizState } from '../lib/state'
+import { computeResults } from '../lib/scoring'
 import {
   addSave,
   deleteSave,
@@ -34,6 +35,16 @@ export default function Home({
   const [toDelete, setToDelete] = useState<NamedSave | null>(null)
   const [importError, setImportError] = useState<string | null>(null)
   const fileRef = useRef<HTMLInputElement>(null)
+  // Courant le plus proche de chaque sauvegarde terminée, affiché dans la liste.
+  const topCourant = useMemo(
+    () =>
+      new Map(
+        saves
+          .filter((s) => s.state.finishedAt)
+          .map((s) => [s.id, computeResults(s.state.answers).affinities[0]?.courant.name]),
+      ),
+    [saves],
+  )
   const answered = state ? Object.keys(state.answers).length : 0
   const inProgress = state && !state.finishedAt && answered > 0
   const finished = !!state?.finishedAt
@@ -137,9 +148,12 @@ export default function Home({
                     <div className="save-info">
                       <strong>{s.name}</strong>
                       <span className="muted">
-                        {s.state.finishedAt ? 'Terminé' : `${n}/${QUESTIONS.length} réponses`} ·{' '}
+                        {s.state.finishedAt
+                          ? (topCourant.get(s.id) ?? 'Terminé')
+                          : `${n}/${QUESTIONS.length} réponses`}{' '}
+                        ·{' '}
                         {dateFmt.format(new Date(s.savedAt))}
-                        {current && ' · en cours'}
+                        {current && !s.state.finishedAt && ' · en cours'}
                       </span>
                     </div>
                     <div className="save-actions">

@@ -498,6 +498,10 @@ main {
   flex-wrap: wrap;
   gap: 6px 16px;
 }
+.footer-credits {
+  margin-top: 2px;
+  font-size: 13px;
+}
 .footer a {
   color: var(--ink-2);
   text-decoration: none;
@@ -1500,4 +1504,12 @@ td.num {
 }
 .save-actions .btn-sm:not(.btn-primary) {
   padding: 0 10px;
+}
+.results-save {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 14px;
+  font-size: 14px;
 }
