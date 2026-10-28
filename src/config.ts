@@ -7,6 +7,6 @@ export const SITE = {
   developer: 'Tyrolium',
   host: 'SolidServ',
   /** Lien du dépôt open source (à renseigner). */
-  githubUrl: 'https://github.com/',
+  githubUrl: 'https://github.com/TheMaxium69/Generation.ium-Quiz',
   version: '1.0.0',
 }
