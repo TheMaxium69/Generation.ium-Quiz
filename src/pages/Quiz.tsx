@@ -98,9 +98,11 @@ export default function Quiz({
         if (e.key === 'Escape') textRef.current?.blur()
         return
       }
-      if (e.key >= '1' && e.key <= '7') {
+      // e.code désigne la touche physique : sur AZERTY, « & é " ' ( § è » (ou « - » sur PC) valent 1 à 7.
+      const digit = /^(?:Digit|Numpad)([1-7])$/.exec(e.code)?.[1] ?? (e.key >= '1' && e.key <= '7' ? e.key : null)
+      if (digit) {
         e.preventDefault()
-        choose(SCALE[Number(e.key) - 1].value)
+        choose(SCALE[Number(digit) - 1].value)
       } else if (e.key === 'Enter' || e.key === 'ArrowRight') {
         if (answer !== undefined) {
           e.preventDefault()
