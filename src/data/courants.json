@@ -1,0 +1,222 @@
+[
+  {
+    "id": "communisme",
+    "name": "Communisme",
+    "short": "Communisme",
+    "summary": "Projet d'une société sans classes où les moyens de production sont mis en commun. La transformation passe par une rupture avec le capitalisme et par un rôle central de la collectivité organisée dans la période de transition.",
+    "ideas": ["Propriété collective des moyens de production", "Abolition de l'exploitation du travail par le capital", "Planification de l'économie selon les besoins", "Lutte des classes comme moteur de l'histoire"],
+    "origins": "Formalisé au XIXe siècle par la critique de l'économie politique et le mouvement ouvrier, il a inspiré les grandes révolutions du XXe siècle.",
+    "figures": ["Karl Marx", "Friedrich Engels", "Antonio Gramsci", "Georg Lukács"],
+    "position": { "economie": -0.95, "autorite": 0.4, "societe": -0.3, "souverainete": 0.3, "environnement": -0.2, "identite": -0.6, "methode": 0.8, "territoire": -0.5, "pouvoir": 0.3 },
+    "weights": { "economie": 2, "methode": 1.5 }
+  },
+  {
+    "id": "trotskisme",
+    "name": "Trotskisme / anticapitalisme révolutionnaire",
+    "short": "Anticapitalisme rév.",
+    "summary": "Courant marxiste internationaliste qui vise le renversement du capitalisme par l'action révolutionnaire des travailleurs, tout en rejetant la bureaucratie d'État et le cadre national.",
+    "ideas": ["Révolution permanente et internationale", "Démocratie ouvrière contre la bureaucratie", "Rupture totale avec le capitalisme", "Internationalisme des travailleurs"],
+    "origins": "Né de l'opposition interne au régime soviétique dans les années 1920-1930, il s'est structuré en organisations internationales.",
+    "figures": ["Léon Trotski", "Rosa Luxemburg", "Ernest Mandel", "Daniel Bensaïd"],
+    "position": { "economie": -0.95, "autorite": 0.0, "societe": -0.7, "souverainete": -0.5, "environnement": 0.2, "identite": -0.9, "methode": 0.95, "territoire": -0.2, "pouvoir": 0.6 },
+    "weights": { "economie": 2, "methode": 2, "souverainete": 1.5, "identite": 1.5 }
+  },
+  {
+    "id": "anarchisme",
+    "name": "Anarchisme",
+    "short": "Anarchisme",
+    "summary": "Pensée qui refuse toute domination, en particulier celle de l'État et du capital, et défend une société organisée par l'association libre, l'entraide et l'autogestion.",
+    "ideas": ["Abolition de l'État et des hiérarchies", "Autogestion et fédération libre des communes", "Entraide plutôt que concurrence", "Refus de toute autorité imposée"],
+    "origins": "Développé au XIXe siècle en même temps que le mouvement ouvrier, il s'est distingué du marxisme par son refus de conquérir l'État.",
+    "figures": ["Pierre-Joseph Proudhon", "Mikhaïl Bakounine", "Pierre Kropotkine", "Élisée Reclus"],
+    "position": { "economie": -0.8, "autorite": -1.0, "societe": -0.8, "souverainete": -0.4, "environnement": 0.4, "identite": -0.9, "methode": 0.8, "territoire": 1.0, "pouvoir": 1.0 },
+    "weights": { "autorite": 2.5, "territoire": 1.5, "pouvoir": 1.5 }
+  },
+  {
+    "id": "socialisme_democratique",
+    "name": "Socialisme démocratique",
+    "short": "Socialisme dém.",
+    "summary": "Volonté de dépasser le capitalisme par des moyens démocratiques : extension de la propriété publique, droits des travailleurs et souveraineté populaire, sans rupture violente.",
+    "ideas": ["Dépassement progressif du capitalisme", "Services publics et biens communs étendus", "Démocratie dans l'entreprise", "Égalité réelle et pas seulement formelle"],
+    "origins": "Issu de la tradition socialiste républicaine du XIXe siècle, il se distingue à la fois du communisme autoritaire et de la social-démocratie gestionnaire.",
+    "figures": ["Jean Jaurès", "Karl Polanyi", "Pierre Leroux", "Erik Olin Wright"],
+    "position": { "economie": -0.6, "autorite": -0.2, "societe": -0.6, "souverainete": 0.1, "environnement": 0.4, "identite": -0.7, "methode": 0.1, "territoire": 0.0, "pouvoir": 0.5 },
+    "weights": { "economie": 1.5 }
+  },
+  {
+    "id": "social_democratie",
+    "name": "Social-démocratie",
+    "short": "Social-démocratie",
+    "summary": "Acceptation de l'économie de marché encadrée par un État social fort : redistribution, protection sociale, négociation collective et réformes graduelles.",
+    "ideas": ["Économie de marché régulée", "État-providence et redistribution", "Compromis entre capital et travail", "Réformisme et construction européenne"],
+    "origins": "Née au tournant du XXe siècle de la rupture avec la stratégie révolutionnaire, elle a façonné les États-providence européens d'après-guerre.",
+    "figures": ["Eduard Bernstein", "John Maynard Keynes", "Léon Blum", "Anthony Crosland"],
+    "position": { "economie": -0.3, "autorite": 0.0, "societe": -0.4, "souverainete": -0.5, "environnement": 0.2, "identite": -0.5, "methode": -0.8, "territoire": -0.1, "pouvoir": -0.2 },
+    "weights": { "methode": 1.5 }
+  },
+  {
+    "id": "ecologie_politique",
+    "name": "Écologie politique",
+    "short": "Écologie politique",
+    "summary": "Pensée qui place la préservation du vivant et des équilibres naturels au centre de la décision politique, en liant justice sociale, démocratie locale et limites planétaires.",
+    "ideas": ["Respect des limites planétaires", "Justice sociale et climatique", "Démocratie locale et participative", "Transition énergétique sans nucléaire"],
+    "origins": "Apparue dans les années 1960-1970 avec la prise de conscience des atteintes à l'environnement et la critique de la société industrielle.",
+    "figures": ["André Gorz", "Rachel Carson", "Arne Næss", "Murray Bookchin"],
+    "position": { "economie": -0.4, "autorite": -0.3, "societe": -0.6, "souverainete": -0.4, "environnement": 0.85, "identite": -0.6, "methode": 0.0, "territoire": 0.6, "pouvoir": 0.4 },
+    "weights": { "environnement": 2.5 }
+  },
+  {
+    "id": "decroissance",
+    "name": "Décroissance",
+    "short": "Décroissance",
+    "summary": "Critique radicale de la croissance et de la société de consommation : réduire volontairement la production et la consommation pour vivre mieux avec moins, à l'échelle locale.",
+    "ideas": ["Sortie de l'objectif de croissance", "Sobriété volontaire et partage", "Relocalisation de l'économie", "Critique de la technique et de la démesure"],
+    "origins": "Théorisée à partir des années 1970 par la critique de l'économie productiviste, elle s'est structurée comme mouvement au début des années 2000.",
+    "figures": ["Nicholas Georgescu-Roegen", "Ivan Illich", "Jacques Ellul", "Bernard Charbonneau"],
+    "position": { "economie": -0.6, "autorite": -0.4, "societe": -0.4, "souverainete": 0.1, "environnement": 1.0, "identite": -0.4, "methode": 0.6, "territoire": 0.8, "pouvoir": 0.6 },
+    "weights": { "environnement": 2.5, "territoire": 1.5 }
+  },
+  {
+    "id": "republicanisme_souverainiste",
+    "name": "Républicanisme souverainiste de gauche",
+    "short": "Républ. souverainiste",
+    "summary": "Défense de la nation républicaine comme cadre de la souveraineté populaire et de l'égalité : État fort et laïque, services publics, rejet des contraintes supranationales jugées antidémocratiques.",
+    "ideas": ["Souveraineté populaire et nationale", "République laïque, une et indivisible", "État stratège et services publics", "Nation civique ouverte à tous ceux qui en partagent les valeurs"],
+    "origins": "Héritier de la Révolution française et de la tradition jacobine, il s'est réaffirmé face à la construction européenne et à la mondialisation.",
+    "figures": ["Jean-Jacques Rousseau", "Condorcet", "Ernest Renan", "Jean Jaurès"],
+    "position": { "economie": -0.5, "autorite": 0.2, "societe": -0.2, "souverainete": 0.8, "environnement": 0.1, "identite": -0.2, "methode": 0.2, "territoire": -0.8, "pouvoir": 0.5 },
+    "weights": { "souverainete": 2, "territoire": 1.5, "economie": 1.5 }
+  },
+  {
+    "id": "centrisme",
+    "name": "Centrisme / libéralisme social",
+    "short": "Centrisme",
+    "summary": "Recherche d'un équilibre entre liberté économique et justice sociale, attachement aux libertés individuelles, à la construction européenne et à la réforme pragmatique.",
+    "ideas": ["Synthèse entre marché et solidarité", "Libertés individuelles et État de droit", "Construction européenne", "Pragmatisme et compromis"],
+    "origins": "Issu du libéralisme politique du XIXe siècle qui s'est ouvert à la question sociale, il cherche à dépasser l'opposition gauche-droite.",
+    "figures": ["Benjamin Constant", "John Stuart Mill", "Leonard Hobhouse", "John Rawls"],
+    "position": { "economie": 0.2, "autorite": 0.0, "societe": -0.4, "souverainete": -0.6, "environnement": 0.2, "identite": -0.4, "methode": -0.9, "territoire": 0.0, "pouvoir": -0.5 },
+    "weights": { "methode": 2 }
+  },
+  {
+    "id": "liberalisme_economique",
+    "name": "Libéralisme économique",
+    "short": "Libéralisme éco.",
+    "summary": "Confiance dans le marché, la propriété privée et la libre entreprise comme sources de prospérité, avec un État limité à ses fonctions essentielles.",
+    "ideas": ["Libre marché et concurrence", "Propriété privée et responsabilité individuelle", "État limité et fiscalité modérée", "Libre-échange"],
+    "origins": "Fondé au XVIIIe siècle par l'économie politique classique, renouvelé au XXe siècle face au keynésianisme et aux économies planifiées.",
+    "figures": ["Adam Smith", "Frédéric Bastiat", "Friedrich Hayek", "Milton Friedman"],
+    "position": { "economie": 0.75, "autorite": 0.0, "societe": -0.1, "souverainete": -0.4, "environnement": -0.3, "identite": -0.2, "methode": -0.4, "territoire": 0.3, "pouvoir": -0.4 },
+    "weights": { "economie": 2 }
+  },
+  {
+    "id": "libertarianisme",
+    "name": "Libertarianisme",
+    "short": "Libertarianisme",
+    "summary": "Primauté absolue de la liberté individuelle et de la propriété de soi : l'État doit être réduit au minimum, voire supprimé, dans l'économie comme dans la vie privée.",
+    "ideas": ["Liberté individuelle maximale", "État minimal ou absent", "Impôt perçu comme une contrainte illégitime", "Non-intervention dans les choix de vie"],
+    "origins": "Structuré au XXe siècle à partir de l'école autrichienne d'économie et de la philosophie des droits naturels.",
+    "figures": ["Ludwig von Mises", "Murray Rothbard", "Ayn Rand", "Robert Nozick"],
+    "position": { "economie": 1.0, "autorite": -0.85, "societe": -0.5, "souverainete": 0.2, "environnement": -0.5, "identite": -0.4, "methode": 0.4, "territoire": 0.8, "pouvoir": 0.2 },
+    "weights": { "economie": 2, "autorite": 2 }
+  },
+  {
+    "id": "democratie_chretienne",
+    "name": "Démocratie chrétienne",
+    "short": "Démocratie chrétienne",
+    "summary": "Politique inspirée par l'humanisme chrétien : dignité de la personne, famille, subsidiarité, économie sociale de marché et construction européenne.",
+    "ideas": ["Dignité de la personne humaine", "Subsidiarité et corps intermédiaires", "Économie sociale de marché", "Réconciliation et unité européenne"],
+    "origins": "Née de la doctrine sociale de l'Église à la fin du XIXe siècle, elle a joué un rôle majeur dans l'Europe d'après-guerre.",
+    "figures": ["Jacques Maritain", "Emmanuel Mounier", "Marc Sangnier", "Luigi Sturzo"],
+    "position": { "economie": 0.0, "autorite": 0.1, "societe": 0.5, "souverainete": -0.6, "environnement": 0.2, "identite": 0.0, "methode": -0.8, "territoire": 0.4, "pouvoir": -0.3 },
+    "weights": { "societe": 1.5, "souverainete": 1.5 }
+  },
+  {
+    "id": "gaullisme",
+    "name": "Gaullisme",
+    "short": "Gaullisme",
+    "summary": "Primauté de l'indépendance nationale et de la grandeur du pays : État fort, exécutif puissant, dissuasion autonome, rassemblement au-delà des clivages.",
+    "ideas": ["Indépendance nationale et diplomatique", "État fort et planificateur", "Exécutif puissant légitimé par le peuple", "Rassemblement au-delà de la gauche et de la droite"],
+    "origins": "Forgé au milieu du XXe siècle autour de la Résistance et de la fondation de la Ve République.",
+    "figures": ["Charles de Gaulle (fondateur)", "André Malraux", "Raymond Aron (influence critique)"],
+    "position": { "economie": -0.1, "autorite": 0.5, "societe": 0.3, "souverainete": 0.8, "environnement": -0.4, "identite": 0.3, "methode": -0.3, "territoire": -0.6, "pouvoir": 0.4 },
+    "weights": { "souverainete": 2 }
+  },
+  {
+    "id": "conservatisme",
+    "name": "Conservatisme",
+    "short": "Conservatisme",
+    "summary": "Attachement aux institutions, aux traditions et aux repères hérités, méfiance envers les changements brusques, défense de l'ordre, de la famille et de la responsabilité.",
+    "ideas": ["Préservation des traditions et de l'héritage", "Ordre, autorité et responsabilité", "Famille comme fondement social", "Prudence face au changement"],
+    "origins": "Formulé à la fin du XVIIIe siècle en réaction aux bouleversements révolutionnaires, il s'est adapté à la démocratie libérale.",
+    "figures": ["Edmund Burke", "Alexis de Tocqueville", "François-René de Chateaubriand", "Roger Scruton"],
+    "position": { "economie": 0.4, "autorite": 0.5, "societe": 0.8, "souverainete": 0.3, "environnement": -0.1, "identite": 0.5, "methode": -0.6, "territoire": 0.2, "pouvoir": -0.1 },
+    "weights": { "societe": 2 }
+  },
+  {
+    "id": "nationalisme",
+    "name": "Nationalisme / droite identitaire",
+    "short": "Nationalisme",
+    "summary": "La nation, comprise comme communauté d'origine, de culture et d'histoire, est la valeur politique suprême : défense de l'identité, fermeture migratoire, souveraineté totale.",
+    "ideas": ["Primauté de la nation et de son identité", "Forte limitation de l'immigration", "Préférence nationale", "Souveraineté et ordre"],
+    "origins": "Développé au XIXe siècle avec l'affirmation des nations, il s'est renouvelé à la fin du XXe siècle autour des questions d'immigration et d'identité.",
+    "figures": ["Johann Gottfried Herder", "Johann Gottlieb Fichte", "Maurice Barrès"],
+    "position": { "economie": -0.1, "autorite": 0.8, "societe": 0.7, "souverainete": 1.0, "environnement": -0.1, "identite": 1.0, "methode": 0.6, "territoire": -0.4, "pouvoir": 0.5 },
+    "weights": { "identite": 2.5, "souverainete": 1.5 }
+  },
+  {
+    "id": "monarchisme",
+    "name": "Monarchisme / contre-révolution",
+    "short": "Monarchisme",
+    "summary": "Rejet de l'héritage révolutionnaire et de la souveraineté populaire au profit d'un ordre hiérarchique, enraciné et souvent religieux, incarné par un monarque.",
+    "ideas": ["Restauration d'une monarchie", "Ordre naturel et hiérarchie", "Place centrale de la religion", "Provinces et corps intermédiaires enracinés"],
+    "origins": "Né en opposition directe à la Révolution française, il a été porté par la pensée contre-révolutionnaire des XIXe et XXe siècles.",
+    "figures": ["Joseph de Maistre", "Louis de Bonald", "Charles Maurras"],
+    "position": { "economie": 0.0, "autorite": 0.8, "societe": 1.0, "souverainete": 0.6, "environnement": 0.2, "identite": 0.7, "methode": 0.7, "territoire": 0.6, "pouvoir": -0.8 },
+    "weights": { "societe": 2, "pouvoir": 2 }
+  },
+  {
+    "id": "bonapartisme",
+    "name": "Bonapartisme",
+    "short": "Bonapartisme",
+    "summary": "Pouvoir personnel fort et centralisé, légitimé directement par le peuple via le plébiscite, au-dessus des partis et des corps intermédiaires, au service de l'ordre et de la grandeur nationale.",
+    "ideas": ["Chef fort légitimé par le peuple", "Centralisation administrative", "Ordre et méritocratie", "Méfiance envers les partis et les parlements"],
+    "origins": "Issu des deux Empires français du XIXe siècle, il désigne plus largement un style de pouvoir plébiscitaire et centralisé.",
+    "figures": ["Napoléon Ier (fondateur)", "Napoléon III (fondateur)"],
+    "position": { "economie": 0.0, "autorite": 0.8, "societe": 0.3, "souverainete": 0.7, "environnement": -0.4, "identite": 0.3, "methode": 0.3, "territoire": -1.0, "pouvoir": 0.7 },
+    "weights": { "autorite": 1.5, "territoire": 2, "pouvoir": 1.5 }
+  },
+  {
+    "id": "technocratie",
+    "name": "Technocratie",
+    "short": "Technocratie",
+    "summary": "Gouvernement par la compétence : les décisions doivent être prises par des experts et des gestionnaires sur des bases rationnelles et scientifiques, plutôt que par le débat partisan.",
+    "ideas": ["Décision fondée sur l'expertise", "Rationalité et efficacité", "Confiance dans la science et la technique", "Méfiance envers le populisme"],
+    "origins": "Ses racines remontent au XIXe siècle et à l'idée d'une société organisée scientifiquement, puis au mouvement technocratique du XXe siècle.",
+    "figures": ["Henri de Saint-Simon", "Auguste Comte", "Thorstein Veblen", "James Burnham"],
+    "position": { "economie": 0.2, "autorite": 0.4, "societe": -0.3, "souverainete": -0.6, "environnement": -0.2, "identite": -0.3, "methode": -0.5, "territoire": -0.4, "pouvoir": -1.0 },
+    "weights": { "pouvoir": 2.5 }
+  },
+  {
+    "id": "federalisme_europeen",
+    "name": "Fédéralisme européen",
+    "short": "Fédéralisme européen",
+    "summary": "Dépassement des États-nations par une fédération européenne dotée d'institutions, d'un budget et d'une défense communs, combinée à une forte autonomie des niveaux locaux.",
+    "ideas": ["États-Unis d'Europe", "Souveraineté partagée au niveau européen", "Subsidiarité entre Europe, États et régions", "Paix par l'intégration"],
+    "origins": "Porté dès les années 1940 par des résistants et intellectuels européens qui voyaient dans le nationalisme la cause des guerres.",
+    "figures": ["Altiero Spinelli", "Denis de Rougemont", "Alexandre Marc", "Jean Monnet"],
+    "position": { "economie": 0.1, "autorite": -0.1, "societe": -0.5, "souverainete": -1.0, "environnement": 0.4, "identite": -0.6, "methode": -0.3, "territoire": 0.5, "pouvoir": -0.2 },
+    "weights": { "souverainete": 2.5 }
+  },
+  {
+    "id": "regionalisme",
+    "name": "Régionalisme",
+    "short": "Régionalisme",
+    "summary": "Défense des régions, de leurs langues, cultures et intérêts face à l'État central : large autonomie, voire auto-gouvernement, dans une Europe des régions.",
+    "ideas": ["Autonomie politique des régions", "Reconnaissance des langues et cultures régionales", "Décentralisation radicale", "Économie et décisions de proximité"],
+    "origins": "Développé au XIXe siècle avec la renaissance des langues régionales, puis relancé à partir des années 1960 contre la centralisation.",
+    "figures": ["Frédéric Mistral", "Pierre-Joseph Proudhon", "Robert Lafont"],
+    "position": { "economie": -0.2, "autorite": -0.3, "societe": 0.0, "souverainete": -0.3, "environnement": 0.5, "identite": 0.4, "methode": 0.2, "territoire": 1.0, "pouvoir": 0.5 },
+    "weights": { "territoire": 2.5 }
+  }
+]
