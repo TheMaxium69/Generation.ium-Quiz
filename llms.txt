@@ -1,0 +1,97 @@
+# Questionnaire des courants politiques (Génération IUM)
+
+> Test politique gratuit, anonyme et sans inscription, proposé par Génération IUM : 100 affirmations pour se situer parmi 20 courants de pensée politique et sur 9 axes. Aucun parti ni personnalité n'est cité : seules les idées comptent. Le calcul est fait dans le navigateur et aucune réponse n'est envoyée à un serveur.
+
+## Faits clés
+
+- Adresse : https://quiz.generation-ium.fr/
+- Éditeur : Génération IUM (https://www.generation-ium.fr/), développé par Tyrolium
+- Format : 100 affirmations, échelle d'accord à 7 niveaux, possibilité de passer et d'expliquer chaque réponse
+- Durée : environ 20 minutes, progression sauvegardée sur l'appareil
+- Résultats : affinité en % avec 20 courants, position sur 9 axes, boussole politique, indicateur gauche–droite, résultats par thème
+- Export : fichier Markdown complet à transmettre à un assistant IA (ChatGPT, Claude, Gemini, Mistral…)
+- Confidentialité : aucun compte, aucun serveur, aucune base de données
+
+## Courants de pensée
+
+- Communisme : Projet d'une société sans classes où les moyens de production sont mis en commun. La transformation passe par une rupture avec le capitalisme et par un rôle central de la collectivité organisée dans la période de transition.
+- Trotskisme / anticapitalisme révolutionnaire : Courant marxiste internationaliste qui vise le renversement du capitalisme par l'action révolutionnaire des travailleurs, tout en rejetant la bureaucratie d'État et le cadre national.
+- Anarchisme : Pensée qui refuse toute domination, en particulier celle de l'État et du capital, et défend une société organisée par l'association libre, l'entraide et l'autogestion.
+- Socialisme démocratique : Volonté de dépasser le capitalisme par des moyens démocratiques : extension de la propriété publique, droits des travailleurs et souveraineté populaire, sans rupture violente.
+- Social-démocratie : Acceptation de l'économie de marché encadrée par un État social fort : redistribution, protection sociale, négociation collective et réformes graduelles.
+- Écologie politique : Pensée qui place la préservation du vivant et des équilibres naturels au centre de la décision politique, en liant justice sociale, démocratie locale et limites planétaires.
+- Décroissance : Critique radicale de la croissance et de la société de consommation : réduire volontairement la production et la consommation pour vivre mieux avec moins, à l'échelle locale.
+- Républicanisme souverainiste de gauche : Défense de la nation républicaine comme cadre de la souveraineté populaire et de l'égalité : État fort et laïque, services publics, rejet des contraintes supranationales jugées antidémocratiques.
+- Centrisme / libéralisme social : Recherche d'un équilibre entre liberté économique et justice sociale, attachement aux libertés individuelles, à la construction européenne et à la réforme pragmatique.
+- Libéralisme économique : Confiance dans le marché, la propriété privée et la libre entreprise comme sources de prospérité, avec un État limité à ses fonctions essentielles.
+- Libertarianisme : Primauté absolue de la liberté individuelle et de la propriété de soi : l'État doit être réduit au minimum, voire supprimé, dans l'économie comme dans la vie privée.
+- Démocratie chrétienne : Politique inspirée par l'humanisme chrétien : dignité de la personne, famille, subsidiarité, économie sociale de marché et construction européenne.
+- Gaullisme : Primauté de l'indépendance nationale et de la grandeur du pays : État fort, exécutif puissant, dissuasion autonome, rassemblement au-delà des clivages.
+- Conservatisme : Attachement aux institutions, aux traditions et aux repères hérités, méfiance envers les changements brusques, défense de l'ordre, de la famille et de la responsabilité.
+- Nationalisme / droite identitaire : La nation, comprise comme communauté d'origine, de culture et d'histoire, est la valeur politique suprême : défense de l'identité, fermeture migratoire, souveraineté totale.
+- Monarchisme / contre-révolution : Rejet de l'héritage révolutionnaire et de la souveraineté populaire au profit d'un ordre hiérarchique, enraciné et souvent religieux, incarné par un monarque.
+- Bonapartisme : Pouvoir personnel fort et centralisé, légitimé directement par le peuple via le plébiscite, au-dessus des partis et des corps intermédiaires, au service de l'ordre et de la grandeur nationale.
+- Technocratie : Gouvernement par la compétence : les décisions doivent être prises par des experts et des gestionnaires sur des bases rationnelles et scientifiques, plutôt que par le débat partisan.
+- Fédéralisme européen : Dépassement des États-nations par une fédération européenne dotée d'institutions, d'un budget et d'une défense communs, combinée à une forte autonomie des niveaux locaux.
+- Régionalisme : Défense des régions, de leurs langues, cultures et intérêts face à l'État central : large autonomie, voire auto-gouvernement, dans une Europe des régions.
+
+## Axes d'analyse
+
+- Économie (Collectivisme ↔ Libre marché) : Qui doit organiser la production et la répartition des richesses : la collectivité (propriété commune, planification, redistribution) ou le marché (propriété privée, concurrence, liberté d'entreprendre) ?
+- Autorité (Libertaire ↔ Autoritaire) : Place de l'ordre, de la contrainte et de l'autorité publique face aux libertés individuelles : sécurité, justice, police, armée, contrôle.
+- Société (Progressiste ↔ Conservateur) : Rapport aux mœurs, à la famille, à la religion et aux traditions : faire évoluer la société ou préserver l'héritage et les repères existants.
+- Souveraineté (Supranational ↔ Souverainiste) : Niveau où doit se prendre la décision politique : au-delà des nations (Europe fédérale, institutions internationales, mondialisation) ou dans le cadre de la nation souveraine.
+- Environnement (Productiviste ↔ Écologiste) : Priorité donnée à la croissance, à la production et au progrès technique, ou à la préservation de la nature, à la sobriété et aux limites planétaires.
+- Identité (Universaliste ↔ Identitaire) : Conception de la communauté politique : ouverte et fondée sur des valeurs universelles, ou fondée sur un héritage culturel, une origine et une identité à protéger.
+- Méthode (Réformiste ↔ Rupture radicale) : Manière de changer la société : par la réforme progressive, le compromis et les institutions existantes, ou par la rupture, le renversement de l'ordre établi.
+- Territoire (Centralisateur ↔ Décentralisateur) : Organisation du pouvoir dans l'espace : un État central fort et uniforme (tradition jacobine) ou un pouvoir réparti entre régions, communes et communautés locales.
+- Pouvoir (Élitiste ↔ Populaire) : Qui doit décider : des élites compétentes (experts, représentants, hiérarchies établies) ou le peuple directement (référendum, révocation, démocratie directe).
+
+## Thèmes
+
+- Économie et fiscalité
+- Travail et protection sociale
+- Immigration et identité
+- Sécurité et justice
+- Europe et souveraineté
+- Écologie et énergie
+- Société et mœurs
+- Institutions et démocratie
+- International et défense
+- Éducation, culture et numérique
+
+## Questions fréquentes
+
+### Comment fonctionne ce test politique ?
+
+Vous indiquez votre degré d'accord avec 100 affirmations sur une échelle à 7 niveaux, avec la possibilité de passer une question ou d'expliquer votre choix. Le questionnaire calcule votre position sur 9 axes (économie, autorité, société, souveraineté, environnement, identité, méthode, territoire, pouvoir), un indicateur gauche–droite et votre pourcentage d'affinité avec 20 courants de pensée politique.
+
+### Mes réponses sont-elles collectées ?
+
+Non. Aucun compte, aucun serveur, aucune base de données : le calcul est entièrement réalisé dans votre navigateur et la progression n'est enregistrée que sur votre appareil.
+
+### Combien de temps dure le questionnaire ?
+
+Environ 20 minutes. La progression est sauvegardée automatiquement : vous pouvez vous arrêter et reprendre plus tard.
+
+### Le questionnaire est-il neutre ?
+
+Il ne fait référence à aucun parti ni à aucune personnalité politique : seules les idées comptent. Les affirmations sont mélangées à chaque passage, sans affichage du thème, et rédigées tantôt dans un sens, tantôt dans l'autre pour limiter les biais. La méthode de calcul est publique.
+
+### Quels courants politiques sont analysés ?
+
+Les 20 courants de pensée sont : Communisme, Trotskisme / anticapitalisme révolutionnaire, Anarchisme, Socialisme démocratique, Social-démocratie, Écologie politique, Décroissance, Républicanisme souverainiste de gauche, Centrisme / libéralisme social, Libéralisme économique, Libertarianisme, Démocratie chrétienne, Gaullisme, Conservatisme, Nationalisme / droite identitaire, Monarchisme / contre-révolution, Bonapartisme, Technocratie, Fédéralisme européen, Régionalisme.
+
+### Puis-je faire analyser mes résultats par une IA ?
+
+Oui. À la fin, vous pouvez télécharger un fichier Markdown complet (questions, réponses, explications, méthode et scores) à transmettre à l'assistant IA de votre choix, comme ChatGPT, Claude, Gemini ou Mistral.
+
+### Qui propose ce questionnaire ?
+
+Le questionnaire est proposé gratuitement par Génération IUM, mouvement politique français de la nouvelle génération, et développé par Tyrolium. Il est sans inscription et sans publicité.
+
+## Pages
+
+- [Questionnaire](https://quiz.generation-ium.fr/) : accueil et démarrage du test
+- [Méthodologie](https://quiz.generation-ium.fr/#/methodologie) : formules de calcul, positions de référence des courants
+- [Génération IUM](https://www.generation-ium.fr/) : le mouvement qui propose le questionnaire
